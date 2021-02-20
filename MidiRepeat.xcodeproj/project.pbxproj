@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1510663625E19E4500DE8C74 /* R9MIDISequencer in Frameworks */ = {isa = PBXBuildFile; productRef = 1510663525E19E4500DE8C74 /* R9MIDISequencer */; };
+		1510663C25E19E4E00DE8C74 /* R9MIDISequencer in Frameworks */ = {isa = PBXBuildFile; productRef = 1510663B25E19E4E00DE8C74 /* R9MIDISequencer */; };
+		1510664225E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
+		1510664325E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
+		15984ADD25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */; };
+		15984ADE25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */; };
 		15C2894A25E17EF500032A26 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2894925E17EF500032A26 /* Tests_iOS.swift */; };
 		15C2895525E17EF500032A26 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2895425E17EF500032A26 /* Tests_macOS.swift */; };
 		15C2895725E17EF500032A26 /* MidiRepeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */; };
@@ -15,6 +21,8 @@
 		15C2895A25E17EF500032A26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892F25E17EF400032A26 /* ContentView.swift */; };
 		15C2895B25E17EF500032A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C2893025E17EF500032A26 /* Assets.xcassets */; };
 		15C2895C25E17EF500032A26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15C2893025E17EF500032A26 /* Assets.xcassets */; };
+		15C2897125E1814700032A26 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C2897025E1814700032A26 /* CoreMIDI.framework */; };
+		15C2897325E1814F00032A26 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C2897225E1814F00032A26 /* CoreMIDI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1510664125E19EFB00DE8C74 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
+		15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMidiSynthesizer.swift; sourceTree = "<group>"; };
 		15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiRepeatApp.swift; sourceTree = "<group>"; };
 		15C2892F25E17EF400032A26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15C2893025E17EF500032A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		15C2895025E17EF500032A26 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C2895425E17EF500032A26 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		15C2895625E17EF500032A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15C2897025E1814700032A26 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMIDI.framework; sourceTree = DEVELOPER_DIR; };
+		15C2897225E1814F00032A26 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1510663625E19E4500DE8C74 /* R9MIDISequencer in Frameworks */,
+				15C2897125E1814700032A26 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1510663C25E19E4E00DE8C74 /* R9MIDISequencer in Frameworks */,
+				15C2897325E1814F00032A26 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +99,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1510664825E19EFF00DE8C74 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1510664125E19EFB00DE8C74 /* piano.sf2 */,
+				15C2893025E17EF500032A26 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15984AE325E19B9D007DB4CC /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		15C2892825E17EF400032A26 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +125,7 @@
 				15C2894825E17EF500032A26 /* Tests iOS */,
 				15C2895325E17EF500032A26 /* Tests macOS */,
 				15C2893625E17EF500032A26 /* Products */,
+				15C2896F25E1814700032A26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +133,9 @@
 			isa = PBXGroup;
 			children = (
 				15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */,
+				15984AE325E19B9D007DB4CC /* Logic */,
 				15C2892F25E17EF400032A26 /* ContentView.swift */,
-				15C2893025E17EF500032A26 /* Assets.xcassets */,
+				1510664825E19EFF00DE8C74 /* Resources */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -151,6 +186,15 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		15C2896F25E1814700032A26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C2897225E1814F00032A26 /* CoreMIDI.framework */,
+				15C2897025E1814700032A26 /* CoreMIDI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +211,9 @@
 			dependencies = (
 			);
 			name = "MidiRepeat (iOS)";
+			packageProductDependencies = (
+				1510663525E19E4500DE8C74 /* R9MIDISequencer */,
+			);
 			productName = "MidiRepeat (iOS)";
 			productReference = 15C2893525E17EF500032A26 /* MidiRepeat.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +231,9 @@
 			dependencies = (
 			);
 			name = "MidiRepeat (macOS)";
+			packageProductDependencies = (
+				1510663B25E19E4E00DE8C74 /* R9MIDISequencer */,
+			);
 			productName = "MidiRepeat (macOS)";
 			productReference = 15C2893D25E17EF500032A26 /* MidiRepeat.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +308,9 @@
 				Base,
 			);
 			mainGroup = 15C2892825E17EF400032A26;
+			packageReferences = (
+				1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */,
+			);
 			productRefGroup = 15C2893625E17EF500032A26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C2895B25E17EF500032A26 /* Assets.xcassets in Resources */,
+				1510664225E19EFB00DE8C74 /* piano.sf2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C2895C25E17EF500032A26 /* Assets.xcassets in Resources */,
+				1510664325E19EFB00DE8C74 /* piano.sf2 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15984ADD25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */,
 				15C2895925E17EF500032A26 /* ContentView.swift in Sources */,
 				15C2895725E17EF500032A26 /* MidiRepeatApp.swift in Sources */,
 			);
@@ -317,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15984ADE25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */,
 				15C2895A25E17EF500032A26 /* ContentView.swift in Sources */,
 				15C2895825E17EF500032A26 /* MidiRepeatApp.swift in Sources */,
 			);
@@ -686,6 +743,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/glassonion1/R9MIDISequencer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1510663525E19E4500DE8C74 /* R9MIDISequencer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */;
+			productName = R9MIDISequencer;
+		};
+		1510663B25E19E4E00DE8C74 /* R9MIDISequencer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */;
+			productName = R9MIDISequencer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15C2892925E17EF400032A26 /* Project object */;
 }

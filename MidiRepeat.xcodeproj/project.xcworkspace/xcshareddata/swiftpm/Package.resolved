@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "R9MIDISequencer",
+        "repositoryURL": "https://github.com/glassonion1/R9MIDISequencer.git",
+        "state": {
+          "branch": null,
+          "revision": "2738ee183c7835354b52bd1c23dc484ff056d243",
+          "version": "1.5.7"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
