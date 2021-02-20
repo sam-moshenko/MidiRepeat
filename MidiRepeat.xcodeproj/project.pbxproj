@@ -11,6 +11,8 @@
 		1510663C25E19E4E00DE8C74 /* R9MIDISequencer in Frameworks */ = {isa = PBXBuildFile; productRef = 1510663B25E19E4E00DE8C74 /* R9MIDISequencer */; };
 		1510664225E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
 		1510664325E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
+		1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */; };
+		1510664F25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */; };
 		15984ADD25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */; };
 		15984ADE25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */; };
 		15C2894A25E17EF500032A26 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2894925E17EF500032A26 /* Tests_iOS.swift */; };
@@ -44,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1510664125E19EFB00DE8C74 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
+		1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiReceiver.swift; sourceTree = "<group>"; };
 		15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMidiSynthesizer.swift; sourceTree = "<group>"; };
 		15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiRepeatApp.swift; sourceTree = "<group>"; };
 		15C2892F25E17EF400032A26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				15984ADC25E19B7E007DB4CC /* RandomMidiSynthesizer.swift */,
+				1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -364,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15984ADD25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */,
+				1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895925E17EF500032A26 /* ContentView.swift in Sources */,
 				15C2895725E17EF500032A26 /* MidiRepeatApp.swift in Sources */,
 			);
@@ -374,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15984ADE25E19B7E007DB4CC /* RandomMidiSynthesizer.swift in Sources */,
+				1510664F25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895A25E17EF500032A26 /* ContentView.swift in Sources */,
 				15C2895825E17EF500032A26 /* MidiRepeatApp.swift in Sources */,
 			);

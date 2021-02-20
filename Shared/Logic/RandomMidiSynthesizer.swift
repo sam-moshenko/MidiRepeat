@@ -25,6 +25,17 @@ class RandomMidiSynthesizer: MidiSynthesizer {
     let sampler = Sampler(channelNumber: 1)
     
     init() {
+        MidiReceiver { (packet) in
+            DispatchQueue.global(qos: .background).async { [unowned self] in
+                switch packet.command {
+                case .noteUp:
+                    sampler.stopNote(packet.note)
+                case .noteDown:
+                    sampler.startNote(packet.note)
+                case .none: break
+                }
+            }
+        }
         DispatchQueue.global(qos: .background).async { [unowned self] in
             sampler.loadMelodicBankInstrument(at: url)
         }
