@@ -14,7 +14,7 @@ class Game {
     private let midiChecker: MidiCheckerProtocol
     
     init() {
-        midiPlayer = MidiPlayer()
+        midiPlayer = MidiPlayer(instrument: PianoInstrument())
         randomMidiGenerator = RandomMidiGenerator()
         midiReceiver = MidiReceiver()
         midiChecker = MidiChecker()

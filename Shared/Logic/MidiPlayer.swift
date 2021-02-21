@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import R9MIDISequencer
 
 protocol MidiPlayerProtocol {
     func play(notes: [Note])
@@ -17,16 +16,10 @@ protocol MidiPlayerProtocol {
 class MidiPlayer: MidiPlayerProtocol {
     private let playTime = 1
     
-    private let url = Bundle.main.url(
-        forResource: "piano",
-        withExtension: "sf2"
-    )!
-    private let sampler = Sampler(channelNumber: 1)
+    private let instrument: Instrument
     
-    init() {
-        DispatchQueue.global(qos: .background).async { [unowned self] in
-            sampler.loadMelodicBankInstrument(at: url)
-        }
+    init(instrument: Instrument) {
+        self.instrument = instrument
     }
     
     func play(notes: [Note]) {
@@ -36,11 +29,11 @@ class MidiPlayer: MidiPlayerProtocol {
     }
     
     func startNote(_ note: Note) {
-        sampler.startNote(note.value)
+        instrument.startNote(note)
     }
     
     func stopNote(_ note: Note) {
-        sampler.stopNote(note.value)
+        instrument.stopNote(note)
     }
     
     private func play(note: Note) {

@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1510663625E19E4500DE8C74 /* R9MIDISequencer in Frameworks */ = {isa = PBXBuildFile; productRef = 1510663525E19E4500DE8C74 /* R9MIDISequencer */; };
-		1510663C25E19E4E00DE8C74 /* R9MIDISequencer in Frameworks */ = {isa = PBXBuildFile; productRef = 1510663B25E19E4E00DE8C74 /* R9MIDISequencer */; };
 		1510664225E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
 		1510664325E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
 		1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */; };
 		1510664F25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */; };
 		1543EF8D25E3032800336565 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF8C25E3032800336565 /* CollectionExtension.swift */; };
 		1543EF8E25E3032800336565 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF8C25E3032800336565 /* CollectionExtension.swift */; };
+		1543EF9825E308C400336565 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF9725E308C400336565 /* Instrument.swift */; };
+		1543EF9925E308C400336565 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF9725E308C400336565 /* Instrument.swift */; };
 		15984ADD25E19B7E007DB4CC /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */; };
 		15984ADE25E19B7E007DB4CC /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */; };
 		15A39D8325E25331007D32BD /* RandomMidiGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A39D8225E25331007D32BD /* RandomMidiGenerator.swift */; };
@@ -58,6 +58,7 @@
 		1510664125E19EFB00DE8C74 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
 		1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiReceiver.swift; sourceTree = "<group>"; };
 		1543EF8C25E3032800336565 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
+		1543EF9725E308C400336565 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiPlayer.swift; sourceTree = "<group>"; };
 		15A39D8225E25331007D32BD /* RandomMidiGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMidiGenerator.swift; sourceTree = "<group>"; };
 		15A39D8D25E25503007D32BD /* MidiChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiChecker.swift; sourceTree = "<group>"; };
@@ -86,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1510663625E19E4500DE8C74 /* R9MIDISequencer in Frameworks */,
 				15C2897125E1814700032A26 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1510663C25E19E4E00DE8C74 /* R9MIDISequencer in Frameworks */,
 				15C2897325E1814F00032A26 /* CoreMIDI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */,
+				1543EF9725E308C400336565 /* Instrument.swift */,
 				1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */,
 				15A39D8225E25331007D32BD /* RandomMidiGenerator.swift */,
 				15A39DA125E2E49B007D32BD /* Note.swift */,
@@ -244,7 +244,6 @@
 			);
 			name = "MidiRepeat (iOS)";
 			packageProductDependencies = (
-				1510663525E19E4500DE8C74 /* R9MIDISequencer */,
 			);
 			productName = "MidiRepeat (iOS)";
 			productReference = 15C2893525E17EF500032A26 /* MidiRepeat.app */;
@@ -264,7 +263,6 @@
 			);
 			name = "MidiRepeat (macOS)";
 			packageProductDependencies = (
-				1510663B25E19E4E00DE8C74 /* R9MIDISequencer */,
 			);
 			productName = "MidiRepeat (macOS)";
 			productReference = 15C2893D25E17EF500032A26 /* MidiRepeat.app */;
@@ -341,7 +339,6 @@
 			);
 			mainGroup = 15C2892825E17EF400032A26;
 			packageReferences = (
-				1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */,
 			);
 			productRefGroup = 15C2893625E17EF500032A26 /* Products */;
 			projectDirPath = "";
@@ -397,6 +394,7 @@
 			files = (
 				15A39D8E25E25503007D32BD /* MidiChecker.swift in Sources */,
 				15A39D8325E25331007D32BD /* RandomMidiGenerator.swift in Sources */,
+				1543EF9825E308C400336565 /* Instrument.swift in Sources */,
 				15A39D9525E256C0007D32BD /* Game.swift in Sources */,
 				15A39DA225E2E49B007D32BD /* Note.swift in Sources */,
 				15984ADD25E19B7E007DB4CC /* MidiPlayer.swift in Sources */,
@@ -413,6 +411,7 @@
 			files = (
 				15A39D8F25E25503007D32BD /* MidiChecker.swift in Sources */,
 				15A39D8425E25331007D32BD /* RandomMidiGenerator.swift in Sources */,
+				1543EF9925E308C400336565 /* Instrument.swift in Sources */,
 				15A39D9625E256C0007D32BD /* Game.swift in Sources */,
 				15A39DA325E2E49B007D32BD /* Note.swift in Sources */,
 				15984ADE25E19B7E007DB4CC /* MidiPlayer.swift in Sources */,
@@ -787,30 +786,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/glassonion1/R9MIDISequencer.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.7;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1510663525E19E4500DE8C74 /* R9MIDISequencer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */;
-			productName = R9MIDISequencer;
-		};
-		1510663B25E19E4E00DE8C74 /* R9MIDISequencer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1510663425E19E4500DE8C74 /* XCRemoteSwiftPackageReference "R9MIDISequencer" */;
-			productName = R9MIDISequencer;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 15C2892925E17EF400032A26 /* Project object */;
 }
