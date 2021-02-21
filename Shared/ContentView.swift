@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    let midiSynth: MidiSynthesizer
+    let game: Game
     
     var body: some View {
         HStack {
         Text("Repeat after me")
             .padding()
             Button("Play") {
-                midiSynth.play()
+                game.onPlayTap()
             }
         }
     }
@@ -23,6 +23,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(midiSynth: RandomMidiSynthesizer())
+        ContentView(game: Game())
     }
 }

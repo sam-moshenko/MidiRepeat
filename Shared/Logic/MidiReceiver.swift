@@ -18,22 +18,28 @@ struct Packet {
     }
 }
 
-class MidiReceiver {
-    init(packetBlock: @escaping (Packet) -> Void) {
+protocol MidiReceiverProtocol {
+    var packetBlock: ((Packet) -> Void)? { get set }
+}
+
+class MidiReceiver: MidiReceiverProtocol {
+    var packetBlock: ((Packet) -> Void)?
+    
+    init() {
         let source = MIDIGetSource(0)
         let client: UnsafeMutablePointer<MIDIClientRef> = .allocate(capacity: 1)
         MIDIClientCreateWithBlock("My app client" as CFString, client) { event in
             print(event)
         }
         let inputPort: UnsafeMutablePointer<MIDIPortRef> = .allocate(capacity: 1)
-        MIDIInputPortCreateWithBlock(client.pointee, "My app port" as CFString, inputPort) { (listRef, pointer) in
+        MIDIInputPortCreateWithBlock(client.pointee, "My app port" as CFString, inputPort) { [unowned self] (listRef, pointer) in
             let list = listRef.pointee
             let packet = Packet(
                 command: Packet.Command.init(rawValue: list.packet.data.0),
                 note: list.packet.data.1,
                 speed: list.packet.data.2
             )
-            packetBlock(packet)
+            self.packetBlock?(packet)
         }
         let connectionReference: UnsafeMutablePointer<MIDIThruConnectionRef> = .allocate(capacity: 1)
         MIDIPortConnectSource(inputPort.pointee, source, connectionReference)
