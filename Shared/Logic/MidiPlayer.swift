@@ -36,11 +36,11 @@ class MidiPlayer: MidiPlayerProtocol {
     }
     
     func startNote(_ note: Note) {
-        sampler.startNote(note)
+        sampler.startNote(note.value)
     }
     
     func stopNote(_ note: Note) {
-        sampler.stopNote(note)
+        sampler.stopNote(note.value)
     }
     
     private func play(note: Note) {

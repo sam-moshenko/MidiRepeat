@@ -23,17 +23,12 @@ class MidiChecker: MidiCheckerProtocol {
     
     func onTapNote(_ note: Note) {
         let noteIndex = notesPlayed
-        if referenceNotes[safe: noteIndex] == note {
+        guard let correctNote = referenceNotes[safe: noteIndex] else { return }
+        if correctNote == note {
             notesPlayed += 1
-            print("Correct note")
+            print("Correct note \(note.key.rawValue)")
         } else {
-            print("Incorrect note")
+            print("Incorrect note \(note.key.rawValue), correct is \(correctNote.key.rawValue)")
         }
-    }
-}
-
-extension Collection {
-    subscript(safe index: Index) -> Element? {
-        indices.contains(index) ? self[index] : nil
     }
 }

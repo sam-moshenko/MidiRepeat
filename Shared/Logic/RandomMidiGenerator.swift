@@ -7,8 +7,6 @@
 
 import Foundation
 
-typealias Note = UInt8
-
 protocol MidiGeneratorProtocol {
     func generate() -> [Note]
 }
@@ -21,6 +19,6 @@ class RandomMidiGenerator: MidiGeneratorProtocol {
     func generate() -> [Note] {
         (0..<noteCount)
             .map{ _ in (Int(arc4random()) % (highestNote - lowestNote)) + lowestNote }
-            .map { UInt8($0) }
+            .map { Note(value: UInt8($0)) }
     }
 }

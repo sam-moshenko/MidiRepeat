@@ -10,7 +10,7 @@ import CoreMIDI
 
 struct Packet {
     let command: Command?
-    let note: UInt8
+    let note: Note
     let speed: UInt8
     
     enum Command: UInt8 {
@@ -36,7 +36,7 @@ class MidiReceiver: MidiReceiverProtocol {
             let list = listRef.pointee
             let packet = Packet(
                 command: Packet.Command.init(rawValue: list.packet.data.0),
-                note: list.packet.data.1,
+                note: Note(value: list.packet.data.1),
                 speed: list.packet.data.2
             )
             self.packetBlock?(packet)
