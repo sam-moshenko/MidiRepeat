@@ -26,8 +26,8 @@ class ScoreCounter {
     init() {
         failedNotes
             .map { notes in
-                let difference: Int = abs(Int(notes.0.value - notes.1.value))
-                let score = 1 / difference
+                let difference: Int = abs(Int(notes.0.value) - Int(notes.1.value))
+                let score = 2 / difference
                 return score
             }
             .assign(to: \.scores, on: self)
@@ -39,6 +39,6 @@ extension ScoreCounter: ScoreCounterInput {}
 
 extension ScoreCounter: ScoreCounterOutput {
     var score: AnyPublisher<Int, Never> {
-        $scores.eraseToAnyPublisher()
+        $scores.scan(0, +).eraseToAnyPublisher()
     }
 }

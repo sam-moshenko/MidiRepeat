@@ -27,6 +27,7 @@
 		15A39DA325E2E49B007D32BD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A39DA125E2E49B007D32BD /* Note.swift */; };
 		15B10E9525EBC674008B942C /* ScoreCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10E9425EBC674008B942C /* ScoreCounter.swift */; };
 		15B10E9625EBC674008B942C /* ScoreCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10E9425EBC674008B942C /* ScoreCounter.swift */; };
+		15B10EAF25EBDA4D008B942C /* ScoreCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10EAE25EBDA4D008B942C /* ScoreCounterTests.swift */; };
 		15C2895725E17EF500032A26 /* MidiRepeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */; };
 		15C2895825E17EF500032A26 /* MidiRepeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */; };
 		15C2895925E17EF500032A26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892F25E17EF400032A26 /* ContentView.swift */; };
@@ -36,6 +37,16 @@
 		15C2897125E1814700032A26 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C2897025E1814700032A26 /* CoreMIDI.framework */; };
 		15C2897325E1814F00032A26 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C2897225E1814F00032A26 /* CoreMIDI.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15B10EB125EBDA4D008B942C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15C2892925E17EF400032A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15C2893C25E17EF500032A26;
+			remoteInfo = "MidiRepeat (macOS)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1510664125E19EFB00DE8C74 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
@@ -48,6 +59,9 @@
 		15A39D9425E256C0007D32BD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		15A39DA125E2E49B007D32BD /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		15B10E9425EBC674008B942C /* ScoreCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCounter.swift; sourceTree = "<group>"; };
+		15B10EAC25EBDA4D008B942C /* MidiRepeatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidiRepeatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B10EAE25EBDA4D008B942C /* ScoreCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCounterTests.swift; sourceTree = "<group>"; };
+		15B10EB025EBDA4D008B942C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiRepeatApp.swift; sourceTree = "<group>"; };
 		15C2892F25E17EF400032A26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15C2893025E17EF500032A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +75,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		15B10EA925EBDA4D008B942C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15C2893225E17EF500032A26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,12 +133,22 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		15B10EAD25EBDA4D008B942C /* MidiRepeatTests */ = {
+			isa = PBXGroup;
+			children = (
+				15B10EAE25EBDA4D008B942C /* ScoreCounterTests.swift */,
+				15B10EB025EBDA4D008B942C /* Info.plist */,
+			);
+			path = MidiRepeatTests;
+			sourceTree = "<group>";
+		};
 		15C2892825E17EF400032A26 = {
 			isa = PBXGroup;
 			children = (
 				15C2892D25E17EF400032A26 /* Shared */,
 				15C2893725E17EF500032A26 /* iOS */,
 				15C2893E25E17EF500032A26 /* macOS */,
+				15B10EAD25EBDA4D008B942C /* MidiRepeatTests */,
 				15C2893625E17EF500032A26 /* Products */,
 				15C2896F25E1814700032A26 /* Frameworks */,
 			);
@@ -140,6 +171,7 @@
 			children = (
 				15C2893525E17EF500032A26 /* MidiRepeat.app */,
 				15C2893D25E17EF500032A26 /* MidiRepeat.app */,
+				15B10EAC25EBDA4D008B942C /* MidiRepeatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +205,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		15B10EAB25EBDA4D008B942C /* MidiRepeatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15B10EB325EBDA4D008B942C /* Build configuration list for PBXNativeTarget "MidiRepeatTests" */;
+			buildPhases = (
+				15B10EA825EBDA4D008B942C /* Sources */,
+				15B10EA925EBDA4D008B942C /* Frameworks */,
+				15B10EAA25EBDA4D008B942C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15B10EB225EBDA4D008B942C /* PBXTargetDependency */,
+			);
+			name = MidiRepeatTests;
+			productName = MidiRepeatTests;
+			productReference = 15B10EAC25EBDA4D008B942C /* MidiRepeatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		15C2893425E17EF500032A26 /* MidiRepeat (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15C2895F25E17EF500032A26 /* Build configuration list for PBXNativeTarget "MidiRepeat (iOS)" */;
@@ -220,6 +270,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					15B10EAB25EBDA4D008B942C = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 15C2893C25E17EF500032A26;
+					};
 					15C2893425E17EF500032A26 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -245,11 +299,19 @@
 			targets = (
 				15C2893425E17EF500032A26 /* MidiRepeat (iOS) */,
 				15C2893C25E17EF500032A26 /* MidiRepeat (macOS) */,
+				15B10EAB25EBDA4D008B942C /* MidiRepeatTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		15B10EAA25EBDA4D008B942C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15C2893325E17EF500032A26 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +333,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		15B10EA825EBDA4D008B942C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15B10EAF25EBDA4D008B942C /* ScoreCounterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		15C2893125E17EF500032A26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,7 +379,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		15B10EB225EBDA4D008B942C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15C2893C25E17EF500032A26 /* MidiRepeat (macOS) */;
+			targetProxy = 15B10EB125EBDA4D008B942C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		15B10EB425EBDA4D008B942C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MidiRepeatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.alfabank.MidiRepeatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MidiRepeat.app/Contents/MacOS/MidiRepeat";
+			};
+			name = Debug;
+		};
+		15B10EB525EBDA4D008B942C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MidiRepeatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.alfabank.MidiRepeatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MidiRepeat.app/Contents/MacOS/MidiRepeat";
+			};
+			name = Release;
+		};
 		15C2895D25E17EF500032A26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,6 +631,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		15B10EB325EBDA4D008B942C /* Build configuration list for PBXNativeTarget "MidiRepeatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15B10EB425EBDA4D008B942C /* Debug */,
+				15B10EB525EBDA4D008B942C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		15C2892C25E17EF400032A26 /* Build configuration list for PBXProject "MidiRepeat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
