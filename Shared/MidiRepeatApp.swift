@@ -11,7 +11,7 @@ import SwiftUI
 struct MidiRepeatApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(game: Game())
+            ContentView().environmentObject(Game())
         }
     }
 }

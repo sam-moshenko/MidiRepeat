@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    let game: Game
+    @EnvironmentObject var game: Game
     
     var body: some View {
-        HStack {
-        Text("Repeat after me")
-            .padding()
-            Button("Play") {
-                game.onPlayTap()
+        VStack {
+            Text("Score:")
+            Text(verbatim: game.score)
+            Divider()
+            Text(verbatim: game.notes.string)
+            HStack {
+                Text("Repeat after me")
+                    .padding()
+                Button("Play") {
+                    game.onPlayTap()
+                }
             }
         }
     }
@@ -23,6 +29,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(game: Game())
+        ContentView().environmentObject(Game())
     }
 }

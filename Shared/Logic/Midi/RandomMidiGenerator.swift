@@ -14,7 +14,7 @@ protocol MidiGeneratorProtocol {
 class RandomMidiGenerator: MidiGeneratorProtocol {
     let highestNote = 62
     let lowestNote = 49
-    let noteCount = 4
+    let noteCount = 3
     
     func generate() -> [Note] {
         (0..<noteCount)

@@ -15,10 +15,10 @@ protocol MidiCheckerProtocol {
 class MidiChecker: MidiCheckerProtocol {
     private var referenceNotes: [Note] = []
     private var notesPlayed: Int = 0
-    private let scoreCounter: ScoreCounterInput
+    private let correctnessReceiver: NoteCorrectnessReceiver
     
-    init(scoreCounter: ScoreCounterInput) {
-        self.scoreCounter = scoreCounter
+    init(correctnessReceiver: NoteCorrectnessReceiver) {
+        self.correctnessReceiver = correctnessReceiver
     }
     
     func check(referenceNotes: [Note]) {
@@ -31,9 +31,9 @@ class MidiChecker: MidiCheckerProtocol {
         guard let correctNote = referenceNotes[safe: noteIndex] else { return }
         if correctNote == note {
             notesPlayed += 1
-            
-            print("Correct note \(note.key.rawValue)")
+            correctnessReceiver.correctNotes.send(note)
         } else {
+            correctnessReceiver.failedNotes.send((correct: correctNote, played: note))
             print("Incorrect note \(note.key.rawValue), correct is \(correctNote.key.rawValue)")
         }
     }
