@@ -29,4 +29,18 @@ class ScoreCounterTests: XCTestCase {
         sutInput.failedNotes.send((.init(value: 13), .init(value: 10)))
         waitForExpectations(timeout: 1, handler: nil)
     }
+    
+    func testCorrectNotes() {
+        var expectedScores = [0, 10, 20]
+        let valueExpectation = expectation(description: "Value output")
+        valueExpectation.expectedFulfillmentCount = expectedScores.count
+        sutOutput.score.sink { value in
+            XCTAssertEqual(expectedScores[0], value)
+            expectedScores.remove(at: 0)
+            valueExpectation.fulfill()
+        }.store(in: &cancelables)
+        sutInput.correctNotes.send(())
+        sutInput.correctNotes.send(())
+        waitForExpectations(timeout: 1, handler: nil)
+    }
 }
