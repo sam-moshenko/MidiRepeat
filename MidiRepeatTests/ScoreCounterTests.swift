@@ -39,8 +39,8 @@ class ScoreCounterTests: XCTestCase {
             expectedScores.remove(at: 0)
             valueExpectation.fulfill()
         }.store(in: &cancelables)
-        sutInput.correctNotes.send(())
-        sutInput.correctNotes.send(())
+        sutInput.correctNotes.send(.init(value: 0))
+        sutInput.correctNotes.send(.init(value: 0))
         waitForExpectations(timeout: 1, handler: nil)
     }
 }

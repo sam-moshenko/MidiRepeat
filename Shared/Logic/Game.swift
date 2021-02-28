@@ -17,7 +17,7 @@ class Game {
         midiPlayer = MidiPlayer(instrument: PianoInstrument())
         randomMidiGenerator = RandomMidiGenerator()
         midiReceiver = MidiReceiver()
-        midiChecker = MidiChecker()
+        midiChecker = MidiChecker(scoreCounter: ScoreCounter())
         midiReceiver.packetBlock = { [unowned self] (packet) in
             DispatchQueue.global(qos: .background).async { [unowned self] in
                 switch packet.command {
