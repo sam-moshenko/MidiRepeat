@@ -37,23 +37,6 @@
 		15C2897325E1814F00032A26 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15C2897225E1814F00032A26 /* CoreMIDI.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		15C2894625E17EF500032A26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15C2892925E17EF400032A26 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15C2893425E17EF500032A26;
-			remoteInfo = "MidiRepeat (iOS)";
-		};
-		15C2895125E17EF500032A26 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 15C2892925E17EF400032A26 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 15C2893C25E17EF500032A26;
-			remoteInfo = "MidiRepeat (macOS)";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1510664125E19EFB00DE8C74 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
 		1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiReceiver.swift; sourceTree = "<group>"; };
@@ -73,8 +56,6 @@
 		15C2893D25E17EF500032A26 /* MidiRepeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MidiRepeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C2893F25E17EF500032A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C2894025E17EF500032A26 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		15C2894525E17EF500032A26 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		15C2895025E17EF500032A26 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15C2897025E1814700032A26 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMIDI.framework; sourceTree = DEVELOPER_DIR; };
 		15C2897225E1814F00032A26 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -93,20 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				15C2897325E1814F00032A26 /* CoreMIDI.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15C2894225E17EF500032A26 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15C2894D25E17EF500032A26 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +140,6 @@
 			children = (
 				15C2893525E17EF500032A26 /* MidiRepeat.app */,
 				15C2893D25E17EF500032A26 /* MidiRepeat.app */,
-				15C2894525E17EF500032A26 /* Tests iOS.xctest */,
-				15C2895025E17EF500032A26 /* Tests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,42 +211,6 @@
 			productReference = 15C2893D25E17EF500032A26 /* MidiRepeat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		15C2894425E17EF500032A26 /* Tests iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 15C2896525E17EF500032A26 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
-			buildPhases = (
-				15C2894125E17EF500032A26 /* Sources */,
-				15C2894225E17EF500032A26 /* Frameworks */,
-				15C2894325E17EF500032A26 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				15C2894725E17EF500032A26 /* PBXTargetDependency */,
-			);
-			name = "Tests iOS";
-			productName = "Tests iOS";
-			productReference = 15C2894525E17EF500032A26 /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		15C2894F25E17EF500032A26 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 15C2896825E17EF500032A26 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				15C2894C25E17EF500032A26 /* Sources */,
-				15C2894D25E17EF500032A26 /* Frameworks */,
-				15C2894E25E17EF500032A26 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				15C2895225E17EF500032A26 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = 15C2895025E17EF500032A26 /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -296,14 +225,6 @@
 					};
 					15C2893C25E17EF500032A26 = {
 						CreatedOnToolsVersion = 12.4;
-					};
-					15C2894425E17EF500032A26 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 15C2893425E17EF500032A26;
-					};
-					15C2894F25E17EF500032A26 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 15C2893C25E17EF500032A26;
 					};
 				};
 			};
@@ -324,8 +245,6 @@
 			targets = (
 				15C2893425E17EF500032A26 /* MidiRepeat (iOS) */,
 				15C2893C25E17EF500032A26 /* MidiRepeat (macOS) */,
-				15C2894425E17EF500032A26 /* Tests iOS */,
-				15C2894F25E17EF500032A26 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -346,20 +265,6 @@
 			files = (
 				15C2895C25E17EF500032A26 /* Assets.xcassets in Resources */,
 				1510664325E19EFB00DE8C74 /* piano.sf2 in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15C2894325E17EF500032A26 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15C2894E25E17EF500032A26 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,34 +307,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		15C2894125E17EF500032A26 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		15C2894C25E17EF500032A26 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		15C2894725E17EF500032A26 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 15C2893425E17EF500032A26 /* MidiRepeat (iOS) */;
-			targetProxy = 15C2894625E17EF500032A26 /* PBXContainerItemProxy */;
-		};
-		15C2895225E17EF500032A26 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 15C2893C25E17EF500032A26 /* MidiRepeat (macOS) */;
-			targetProxy = 15C2895125E17EF500032A26 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		15C2895D25E17EF500032A26 /* Debug */ = {
@@ -630,91 +508,6 @@
 			};
 			name = Release;
 		};
-		15C2896625E17EF500032A26 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Tests iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.lebedev.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "MidiRepeat (iOS)";
-			};
-			name = Debug;
-		};
-		15C2896725E17EF500032A26 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Tests iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.lebedev.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "MidiRepeat (iOS)";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		15C2896925E17EF500032A26 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Tests macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.lebedev.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "MidiRepeat (macOS)";
-			};
-			name = Debug;
-		};
-		15C2896A25E17EF500032A26 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Tests macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "kz.lebedev.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "MidiRepeat (macOS)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -741,24 +534,6 @@
 			buildConfigurations = (
 				15C2896325E17EF500032A26 /* Debug */,
 				15C2896425E17EF500032A26 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		15C2896525E17EF500032A26 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				15C2896625E17EF500032A26 /* Debug */,
-				15C2896725E17EF500032A26 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		15C2896825E17EF500032A26 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				15C2896925E17EF500032A26 /* Debug */,
-				15C2896A25E17EF500032A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
