@@ -27,8 +27,6 @@
 		15A39DA325E2E49B007D32BD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A39DA125E2E49B007D32BD /* Note.swift */; };
 		15B10E9525EBC674008B942C /* ScoreCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10E9425EBC674008B942C /* ScoreCounter.swift */; };
 		15B10E9625EBC674008B942C /* ScoreCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10E9425EBC674008B942C /* ScoreCounter.swift */; };
-		15C2894A25E17EF500032A26 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2894925E17EF500032A26 /* Tests_iOS.swift */; };
-		15C2895525E17EF500032A26 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2895425E17EF500032A26 /* Tests_macOS.swift */; };
 		15C2895725E17EF500032A26 /* MidiRepeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */; };
 		15C2895825E17EF500032A26 /* MidiRepeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */; };
 		15C2895925E17EF500032A26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892F25E17EF400032A26 /* ContentView.swift */; };
@@ -76,11 +74,7 @@
 		15C2893F25E17EF500032A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C2894025E17EF500032A26 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		15C2894525E17EF500032A26 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		15C2894925E17EF500032A26 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		15C2894B25E17EF500032A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C2895025E17EF500032A26 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		15C2895425E17EF500032A26 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		15C2895625E17EF500032A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15C2897025E1814700032A26 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.4.sdk/System/Library/Frameworks/CoreMIDI.framework; sourceTree = DEVELOPER_DIR; };
 		15C2897225E1814F00032A26 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -157,8 +151,6 @@
 				15C2892D25E17EF400032A26 /* Shared */,
 				15C2893725E17EF500032A26 /* iOS */,
 				15C2893E25E17EF500032A26 /* macOS */,
-				15C2894825E17EF500032A26 /* Tests iOS */,
-				15C2895325E17EF500032A26 /* Tests macOS */,
 				15C2893625E17EF500032A26 /* Products */,
 				15C2896F25E1814700032A26 /* Frameworks */,
 			);
@@ -202,24 +194,6 @@
 				15C2894025E17EF500032A26 /* macOS.entitlements */,
 			);
 			path = macOS;
-			sourceTree = "<group>";
-		};
-		15C2894825E17EF500032A26 /* Tests iOS */ = {
-			isa = PBXGroup;
-			children = (
-				15C2894925E17EF500032A26 /* Tests_iOS.swift */,
-				15C2894B25E17EF500032A26 /* Info.plist */,
-			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		15C2895325E17EF500032A26 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				15C2895425E17EF500032A26 /* Tests_macOS.swift */,
-				15C2895625E17EF500032A26 /* Info.plist */,
-			);
-			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		15C2896F25E1814700032A26 /* Frameworks */ = {
@@ -432,7 +406,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15C2894A25E17EF500032A26 /* Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +413,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15C2895525E17EF500032A26 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
