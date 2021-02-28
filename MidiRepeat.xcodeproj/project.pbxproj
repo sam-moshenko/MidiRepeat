@@ -25,6 +25,8 @@
 		15A39D9625E256C0007D32BD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A39D9425E256C0007D32BD /* Game.swift */; };
 		15A39DA225E2E49B007D32BD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A39DA125E2E49B007D32BD /* Note.swift */; };
 		15A39DA325E2E49B007D32BD /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A39DA125E2E49B007D32BD /* Note.swift */; };
+		15B10E9525EBC674008B942C /* ScoreCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10E9425EBC674008B942C /* ScoreCounter.swift */; };
+		15B10E9625EBC674008B942C /* ScoreCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B10E9425EBC674008B942C /* ScoreCounter.swift */; };
 		15C2894A25E17EF500032A26 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2894925E17EF500032A26 /* Tests_iOS.swift */; };
 		15C2895525E17EF500032A26 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2895425E17EF500032A26 /* Tests_macOS.swift */; };
 		15C2895725E17EF500032A26 /* MidiRepeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */; };
@@ -64,6 +66,7 @@
 		15A39D8D25E25503007D32BD /* MidiChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiChecker.swift; sourceTree = "<group>"; };
 		15A39D9425E256C0007D32BD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		15A39DA125E2E49B007D32BD /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		15B10E9425EBC674008B942C /* ScoreCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCounter.swift; sourceTree = "<group>"; };
 		15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiRepeatApp.swift; sourceTree = "<group>"; };
 		15C2892F25E17EF400032A26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		15C2893025E17EF500032A26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 				1543EF9725E308C400336565 /* Instrument.swift */,
 				1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */,
 				15A39D8225E25331007D32BD /* RandomMidiGenerator.swift */,
+				15B10E9425EBC674008B942C /* ScoreCounter.swift */,
 				15A39DA125E2E49B007D32BD /* Note.swift */,
 				15A39D8D25E25503007D32BD /* MidiChecker.swift */,
 				15A39D9425E256C0007D32BD /* Game.swift */,
@@ -394,6 +398,7 @@
 			files = (
 				15A39D8E25E25503007D32BD /* MidiChecker.swift in Sources */,
 				15A39D8325E25331007D32BD /* RandomMidiGenerator.swift in Sources */,
+				15B10E9525EBC674008B942C /* ScoreCounter.swift in Sources */,
 				1543EF9825E308C400336565 /* Instrument.swift in Sources */,
 				15A39D9525E256C0007D32BD /* Game.swift in Sources */,
 				15A39DA225E2E49B007D32BD /* Note.swift in Sources */,
@@ -411,6 +416,7 @@
 			files = (
 				15A39D8F25E25503007D32BD /* MidiChecker.swift in Sources */,
 				15A39D8425E25331007D32BD /* RandomMidiGenerator.swift in Sources */,
+				15B10E9625EBC674008B942C /* ScoreCounter.swift in Sources */,
 				1543EF9925E308C400336565 /* Instrument.swift in Sources */,
 				15A39D9625E256C0007D32BD /* Game.swift in Sources */,
 				15A39DA325E2E49B007D32BD /* Note.swift in Sources */,
