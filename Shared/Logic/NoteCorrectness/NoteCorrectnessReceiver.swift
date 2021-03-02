@@ -16,7 +16,7 @@ protocol NoteCorrectnessReceiver {
 class AnyNoteCorrectnessReceiver: NoteCorrectnessReceiver {
     var failedNotes: PassthroughSubject<(correct: Note, played: Note), Never> = .init()
     var correctNotes: PassthroughSubject<Note, Never> = .init()
-    var cancelables: Set<AnyCancellable> = .init()
+    var cancellables: Set<AnyCancellable> = .init()
     
     private let receivers: [NoteCorrectnessReceiver]
     
@@ -26,10 +26,10 @@ class AnyNoteCorrectnessReceiver: NoteCorrectnessReceiver {
         receivers.forEach { [unowned self] receiver in
             failedNotes.sink {
                 receiver.failedNotes.send($0)
-            }.store(in: &cancelables)
+            }.store(in: &cancellables)
             correctNotes.sink {
                 receiver.correctNotes.send($0)
-            }.store(in: &cancelables)
+            }.store(in: &cancellables)
         }
     }
 }

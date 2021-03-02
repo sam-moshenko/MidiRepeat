@@ -15,7 +15,11 @@ struct ContentView: View {
             Text("Score:")
             Text(verbatim: game.score)
             Divider()
-            Text(verbatim: game.notes.string)
+            HStack {
+            ForEach(game.notes, id: \.self) {
+                Text(verbatim: $0.name).foregroundColor($0.color)
+            }
+            }
             HStack {
                 Text("Repeat after me")
                     .padding()

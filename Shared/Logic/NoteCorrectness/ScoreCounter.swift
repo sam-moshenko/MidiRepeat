@@ -17,23 +17,30 @@ protocol ScoreCounterOutput {
 class ScoreCounter {
     var failedNotes: PassthroughSubject<(correct: Note, played: Note), Never> = .init()
     var correctNotes: PassthroughSubject<Note, Never> = .init()
-    var cancelables: Set<AnyCancellable> = .init()
+    var cancellables: Set<AnyCancellable> = .init()
     @Published private var scores = 0
     
+    static let correctCoefficient = 10
+    static let incorrectMaxCoefficient = 2
+    
     init() {
-        failedNotes
-            .map { notes in
+        let failedNoteWithScore = failedNotes
+            .map { notes -> (note: Note, score: Int) in
                 let difference: Int = abs(Int(notes.0.value) - Int(notes.1.value))
-                let score = 2 / difference
-                return score
+                let score = Self.incorrectMaxCoefficient / difference
+                return (note: notes.correct, score: score)
             }
-            .assign(to: \.scores, on: self)
-            .store(in: &cancelables)
         
-        correctNotes
-            .map { _ in 10 }
+        let correctNoteWithScore = correctNotes
+            .map { (note: $0, score: Self.correctCoefficient) }
+            
+        failedNoteWithScore.merge(with: correctNoteWithScore)
+            .removeDuplicates {
+                $0.note == $1.note
+            }
+            .map { $0.score }
             .assign(to: \.scores, on: self)
-            .store(in: &cancelables)
+            .store(in: &cancellables)
     }
 }
 

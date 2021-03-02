@@ -11,7 +11,7 @@ import Foundation
 
 class Game: ObservableObject {
     @Published var score: String = ""
-    @Published var notes: NSAttributedString = .init()
+    @Published var notes: [NoteNameViewModel] = .init()
     
     private let midiPlayer: MidiPlayerProtocol
     private let randomMidiGenerator: MidiGeneratorProtocol
@@ -20,7 +20,7 @@ class Game: ObservableObject {
     private let scoreCounter = ScoreCounter()
     private let noteNameProvider = NoteNameProducer()
     private let noteCorrectnessReceiver: NoteCorrectnessReceiver
-    private var cancelables: Set<AnyCancellable> = .init()
+    private var cancellables: Set<AnyCancellable> = .init()
     
     init() {
         midiPlayer = MidiPlayer(instrument: PianoInstrument())
@@ -43,13 +43,12 @@ class Game: ObservableObject {
         scoreCounter
             .score
             .map { "\($0)" }.assign(to: \.score, on: self)
-            .store(in: &cancelables)
+            .store(in: &cancellables)
         
         noteNameProvider
             .playedNames
-            .map { $0.reduce(NSMutableAttributedString()) { $0.append($1); return $0 } } // TODO: Refactor
             .assign(to: \.notes, on: self)
-            .store(in: &cancelables)
+            .store(in: &cancellables)
     }
     
     func onPlayTap() {

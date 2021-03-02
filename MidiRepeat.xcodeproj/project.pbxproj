@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		15001EEA25EBF91B00FE9DE1 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15001EE925EBF91B00FE9DE1 /* ArrayExtension.swift */; };
 		15001EEB25EBF91B00FE9DE1 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15001EE925EBF91B00FE9DE1 /* ArrayExtension.swift */; };
+		15063A4E25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15063A4D25EE9375006E7EB0 /* NoteNameViewModel.swift */; };
+		15063A4F25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15063A4D25EE9375006E7EB0 /* NoteNameViewModel.swift */; };
 		1510664225E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
 		1510664325E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
 		1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */; };
@@ -57,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		15001EE925EBF91B00FE9DE1 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		15063A4D25EE9375006E7EB0 /* NoteNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNameViewModel.swift; sourceTree = "<group>"; };
 		1510664125E19EFB00DE8C74 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
 		1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiReceiver.swift; sourceTree = "<group>"; };
 		1543EF8C25E3032800336565 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
@@ -237,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				15A39DA125E2E49B007D32BD /* Note.swift */,
+				15063A4D25EE9375006E7EB0 /* NoteNameViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -394,6 +398,7 @@
 				15A39DA225E2E49B007D32BD /* Note.swift in Sources */,
 				15984ADD25E19B7E007DB4CC /* MidiPlayer.swift in Sources */,
 				1543EF8D25E3032800336565 /* CollectionExtension.swift in Sources */,
+				15063A4E25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */,
 				1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895925E17EF500032A26 /* ContentView.swift in Sources */,
 				15001EEA25EBF91B00FE9DE1 /* ArrayExtension.swift in Sources */,
@@ -415,6 +420,7 @@
 				15A39DA325E2E49B007D32BD /* Note.swift in Sources */,
 				15984ADE25E19B7E007DB4CC /* MidiPlayer.swift in Sources */,
 				1543EF8E25E3032800336565 /* CollectionExtension.swift in Sources */,
+				15063A4F25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */,
 				1510664F25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895A25E17EF500032A26 /* ContentView.swift in Sources */,
 				15001EEB25EBF91B00FE9DE1 /* ArrayExtension.swift in Sources */,

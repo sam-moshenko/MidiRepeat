@@ -15,15 +15,15 @@ class NoteNameProducerTests: XCTestCase {
     let sut = NoteNameProducer()
     var sutInput: NoteNameProducerInput { sut }
     var sutOutput: NoteNameProducerOutput { sut }
-    var cancelables: Set<AnyCancellable> = .init()
+    var cancellables: Set<AnyCancellable> = .init()
     
     func testNotes() {
-        let expected: [NSAttributedString] = [
-            .init(string: "C", attributes: [.foregroundColor: Color.green]),
-            .init(string: "C#", attributes: [.foregroundColor: Color.red]),
-            .init(string: "D", attributes: [.foregroundColor: Color.green])
+        let expected: [NoteNameViewModel] = [
+            .init(name: "C", correctness: .correct),
+            .init(name: "C#", correctness: .incorrect),
+            .init(name: "D", correctness: .correct)
         ]
-        var expectedSeries: [[NSAttributedString]] = [expected[0..<1], expected[0..<2], expected[0..<3]].map { Array($0) }
+        var expectedSeries: [[NoteNameViewModel]] = [expected[0..<1], expected[0..<2], expected[0..<3]].map { Array($0) }
         let namesExpectation = expectation(description: "Names expectation")
         namesExpectation.expectedFulfillmentCount = expectedSeries.count
         sutOutput.playedNames.sink {
@@ -31,9 +31,11 @@ class NoteNameProducerTests: XCTestCase {
             XCTAssertEqual($0, expectedSeries.first)
             expectedSeries.removeFirst()
             namesExpectation.fulfill()
-        }.store(in: &cancelables)
+        }.store(in: &cancellables)
         sutInput.correctNotes.send(.init(value: 0))
-        sutInput.failedNotes.send((.init(value: 1), .init(value: 0)))
+        sutInput.failedNotes.send((correct: .init(value: 1), played: .init(value: 0)))
+        sutInput.failedNotes.send((correct: .init(value: 1), played: .init(value: 2)))
+        sutInput.correctNotes.send(.init(value: 1))
         sutInput.correctNotes.send(.init(value: 2))
         waitForExpectations(timeout: 1, handler: nil)
     }
