@@ -34,7 +34,7 @@ class MidiChecker: MidiCheckerProtocol {
             correctnessReceiver.correctNotes.send(note)
         } else {
             correctnessReceiver.failedNotes.send((correct: correctNote, played: note))
-            print("Incorrect note \(note.key.rawValue), correct is \(correctNote.key.rawValue)")
+            print("Incorrect note \(note.key.string), correct is \(correctNote.key.string)")
         }
     }
 }

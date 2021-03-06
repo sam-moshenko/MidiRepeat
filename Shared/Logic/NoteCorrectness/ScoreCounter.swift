@@ -15,6 +15,7 @@ protocol ScoreCounterOutput {
 }
 
 class ScoreCounter {
+    var reset: PassthroughSubject<Void, Never> = .init()
     var failedNotes: PassthroughSubject<(correct: Note, played: Note), Never> = .init()
     var correctNotes: PassthroughSubject<Note, Never> = .init()
     var cancellables: Set<AnyCancellable> = .init()
@@ -48,6 +49,11 @@ extension ScoreCounter: ScoreCounterInput {}
 
 extension ScoreCounter: ScoreCounterOutput {
     var score: AnyPublisher<Int, Never> {
-        $scores.scan(0, +).eraseToAnyPublisher()
+        $scores
+            .scan(0, +)
+            .handleEvents(receiveSubscription: { [unowned self] _ in
+                scores = 0
+            })
+            .eraseToAnyPublisher()
     }
 }

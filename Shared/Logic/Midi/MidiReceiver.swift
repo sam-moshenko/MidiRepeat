@@ -39,7 +39,10 @@ class MidiReceiver: MidiReceiverProtocol {
                 note: Note(value: list.packet.data.1),
                 speed: list.packet.data.2
             )
-            self.packetBlock?(packet)
+            
+            DispatchQueue.main.async {
+                self.packetBlock?(packet)
+            }
         }
         let connectionReference: UnsafeMutablePointer<MIDIThruConnectionRef> = .allocate(capacity: 1)
         MIDIPortConnectSource(inputPort.pointee, source, connectionReference)

@@ -16,6 +16,7 @@ protocol NoteNameProducerOutput {
 }
 
 class NoteNameProducer: NoteNameProducerInput {
+    var reset: PassthroughSubject<Void, Never> = .init()
     var failedNotes: PassthroughSubject<(correct: Note, played: Note), Never> = .init()
     var correctNotes: PassthroughSubject<Note, Never> = .init()
     @Published private var playedName: NoteNameViewModel? = nil
@@ -37,6 +38,8 @@ class NoteNameProducer: NoteNameProducerInput {
             .compactMap { $0 }
             .assign(to: \.playedName, on: self)
             .store(in: &cancellables)
+        
+        
     }
 }
 
@@ -45,6 +48,9 @@ extension NoteNameProducer: NoteNameProducerOutput {
         $playedName
             .compactMap { $0 }
             .scan([NoteNameViewModel]()) { $0.appending($1) }
+            .handleEvents(receiveSubscription: { [unowned self] _ in
+                playedName = nil
+            })
             .eraseToAnyPublisher()
     }
 }

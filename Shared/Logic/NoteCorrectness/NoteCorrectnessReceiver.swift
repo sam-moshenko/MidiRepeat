@@ -11,9 +11,11 @@ import Foundation
 protocol NoteCorrectnessReceiver {
     var failedNotes: PassthroughSubject<(correct: Note, played: Note), Never> { get }
     var correctNotes: PassthroughSubject<Note, Never> { get }
+    var reset: PassthroughSubject<Void, Never> { get }
 }
 
 class AnyNoteCorrectnessReceiver: NoteCorrectnessReceiver {
+    var reset: PassthroughSubject<Void, Never> = .init()
     var failedNotes: PassthroughSubject<(correct: Note, played: Note), Never> = .init()
     var correctNotes: PassthroughSubject<Note, Never> = .init()
     var cancellables: Set<AnyCancellable> = .init()
@@ -29,6 +31,9 @@ class AnyNoteCorrectnessReceiver: NoteCorrectnessReceiver {
             }.store(in: &cancellables)
             correctNotes.sink {
                 receiver.correctNotes.send($0)
+            }.store(in: &cancellables)
+            reset.sink {
+                receiver.reset.send($0)
             }.store(in: &cancellables)
         }
     }
