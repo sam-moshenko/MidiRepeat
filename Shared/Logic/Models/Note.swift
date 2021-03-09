@@ -7,13 +7,29 @@
 
 import Foundation
 
-struct Note: Equatable {
+struct Note: Equatable, Hashable {
     let value: UInt8
     var key: Key {
         Key(rawValue: value % Key.count) ?? .c
     }
     var octave: UInt8 {
         value / Key.count
+    }
+    var isWhite: Bool {
+        switch key {
+        case .c, .d, .e, .f, .g, .a, .b:
+            return true
+        case .cSharp, .dSharp, .fSharp, .gSharp, .aSharp:
+            return false
+        }
+    }
+    
+    init(value: UInt8) {
+        self.value = value
+    }
+    
+    init(key: Key, octave: UInt8) {
+        self.init(value: key.rawValue * octave)
     }
     
     enum Key: UInt8, CaseIterable {

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PianoKeyboard",
+        "repositoryURL": "https://github.com/garynewby/PianoKeyboard.git",
+        "state": {
+          "branch": null,
+          "revision": "2489dc22908f07e123dd7a87146410f6f40f41d2",
+          "version": "1.0.25"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -20,6 +20,8 @@
 		1543EF9825E308C400336565 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF9725E308C400336565 /* Instrument.swift */; };
 		1543EF9925E308C400336565 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF9725E308C400336565 /* Instrument.swift */; };
 		1547D49C25EBFD6000E25445 /* NoteNameProducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1547D49B25EBFD6000E25445 /* NoteNameProducerTests.swift */; };
+		157B140325F3D518006F89E7 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157B140225F3D518006F89E7 /* PianoView.swift */; };
+		157B140425F3D518006F89E7 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157B140225F3D518006F89E7 /* PianoView.swift */; };
 		15984ADD25E19B7E007DB4CC /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */; };
 		15984ADE25E19B7E007DB4CC /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */; };
 		15A39D8325E25331007D32BD /* RandomMidiGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A39D8225E25331007D32BD /* RandomMidiGenerator.swift */; };
@@ -65,6 +67,7 @@
 		1543EF8C25E3032800336565 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		1543EF9725E308C400336565 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		1547D49B25EBFD6000E25445 /* NoteNameProducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNameProducerTests.swift; sourceTree = "<group>"; };
+		157B140225F3D518006F89E7 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
 		15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiPlayer.swift; sourceTree = "<group>"; };
 		15A39D8225E25331007D32BD /* RandomMidiGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMidiGenerator.swift; sourceTree = "<group>"; };
 		15A39D8D25E25503007D32BD /* MidiChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiChecker.swift; sourceTree = "<group>"; };
@@ -133,6 +136,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		157B140125F3D501006F89E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				15C2892F25E17EF400032A26 /* ContentView.swift */,
+				157B140225F3D518006F89E7 /* PianoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		15984AE325E19B9D007DB4CC /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +206,7 @@
 				15C2892E25E17EF400032A26 /* MidiRepeatApp.swift */,
 				1543EF8B25E3031A00336565 /* Helpers */,
 				15984AE325E19B9D007DB4CC /* Logic */,
-				15C2892F25E17EF400032A26 /* ContentView.swift */,
+				157B140125F3D501006F89E7 /* Views */,
 				1510664825E19EFF00DE8C74 /* Resources */,
 			);
 			path = Shared;
@@ -401,6 +413,7 @@
 				15063A4E25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */,
 				1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895925E17EF500032A26 /* ContentView.swift in Sources */,
+				157B140325F3D518006F89E7 /* PianoView.swift in Sources */,
 				15001EEA25EBF91B00FE9DE1 /* ArrayExtension.swift in Sources */,
 				15B10EC025EBF5A7008B942C /* NoteCorrectnessReceiver.swift in Sources */,
 				15C2895725E17EF500032A26 /* MidiRepeatApp.swift in Sources */,
@@ -423,6 +436,7 @@
 				15063A4F25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */,
 				1510664F25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895A25E17EF500032A26 /* ContentView.swift in Sources */,
+				157B140425F3D518006F89E7 /* PianoView.swift in Sources */,
 				15001EEB25EBF91B00FE9DE1 /* ArrayExtension.swift in Sources */,
 				15B10EC125EBF5A7008B942C /* NoteCorrectnessReceiver.swift in Sources */,
 				15C2895825E17EF500032A26 /* MidiRepeatApp.swift in Sources */,
