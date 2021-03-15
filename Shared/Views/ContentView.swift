@@ -27,6 +27,7 @@ struct ContentView: View {
                     game.onPlayTap()
                 }
             }
+            PianoView()
         }
     }
 }

@@ -13,4 +13,10 @@ extension Array {
         copy.append(obj)
         return copy
     }
+    
+    func appending(contentsOf array: [Element]) -> [Element] {
+        var copy = self
+        copy.append(contentsOf: array)
+        return copy
+    }
 }
