@@ -27,7 +27,7 @@ struct ContentView: View {
                     game.onPlayTap()
                 }
             }
-            PianoView()
+            PianoView(playedNotes: $game.playedNotes)
         }
     }
 }

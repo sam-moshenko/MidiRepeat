@@ -20,6 +20,10 @@
 		1543EF9825E308C400336565 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF9725E308C400336565 /* Instrument.swift */; };
 		1543EF9925E308C400336565 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF9725E308C400336565 /* Instrument.swift */; };
 		1547D49C25EBFD6000E25445 /* NoteNameProducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1547D49B25EBFD6000E25445 /* NoteNameProducerTests.swift */; };
+		1573DEC225FFE1200071CFE0 /* NoteReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573DEC125FFE1200071CFE0 /* NoteReceiver.swift */; };
+		1573DEC325FFE1200071CFE0 /* NoteReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573DEC125FFE1200071CFE0 /* NoteReceiver.swift */; };
+		1573DECB25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573DECA25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift */; };
+		1573DECC25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1573DECA25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift */; };
 		157B140325F3D518006F89E7 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157B140225F3D518006F89E7 /* PianoView.swift */; };
 		157B140425F3D518006F89E7 /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157B140225F3D518006F89E7 /* PianoView.swift */; };
 		15984ADD25E19B7E007DB4CC /* MidiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */; };
@@ -67,6 +71,8 @@
 		1543EF8C25E3032800336565 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		1543EF9725E308C400336565 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		1547D49B25EBFD6000E25445 /* NoteNameProducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNameProducerTests.swift; sourceTree = "<group>"; };
+		1573DEC125FFE1200071CFE0 /* NoteReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteReceiver.swift; sourceTree = "<group>"; };
+		1573DECA25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingScoringNoteReceiver.swift; sourceTree = "<group>"; };
 		157B140225F3D518006F89E7 /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
 		15984ADC25E19B7E007DB4CC /* MidiPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiPlayer.swift; sourceTree = "<group>"; };
 		15A39D8225E25331007D32BD /* RandomMidiGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMidiGenerator.swift; sourceTree = "<group>"; };
@@ -136,6 +142,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		1573DEC025FFE0C00071CFE0 /* NoteReceiver */ = {
+			isa = PBXGroup;
+			children = (
+				1573DEC125FFE1200071CFE0 /* NoteReceiver.swift */,
+				1573DECA25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift */,
+			);
+			path = NoteReceiver;
+			sourceTree = "<group>";
+		};
 		157B140125F3D501006F89E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +166,7 @@
 				15F9B96B25EBFBC900B86AE6 /* Models */,
 				15B10ECC25EBF6BC008B942C /* Midi */,
 				15B10ECB25EBF6AB008B942C /* NoteCorrectness */,
+				1573DEC025FFE0C00071CFE0 /* NoteReceiver */,
 				15A39D9425E256C0007D32BD /* Game.swift */,
 			);
 			path = Logic;
@@ -405,12 +421,14 @@
 				15A39D8325E25331007D32BD /* RandomMidiGenerator.swift in Sources */,
 				15B10E9525EBC674008B942C /* ScoreCounter.swift in Sources */,
 				15B10EC625EBF6A7008B942C /* NoteNameProducer.swift in Sources */,
+				1573DECB25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift in Sources */,
 				1543EF9825E308C400336565 /* Instrument.swift in Sources */,
 				15A39D9525E256C0007D32BD /* Game.swift in Sources */,
 				15A39DA225E2E49B007D32BD /* Note.swift in Sources */,
 				15984ADD25E19B7E007DB4CC /* MidiPlayer.swift in Sources */,
 				1543EF8D25E3032800336565 /* CollectionExtension.swift in Sources */,
 				15063A4E25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */,
+				1573DEC225FFE1200071CFE0 /* NoteReceiver.swift in Sources */,
 				1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895925E17EF500032A26 /* ContentView.swift in Sources */,
 				157B140325F3D518006F89E7 /* PianoView.swift in Sources */,
@@ -428,12 +446,14 @@
 				15A39D8425E25331007D32BD /* RandomMidiGenerator.swift in Sources */,
 				15B10E9625EBC674008B942C /* ScoreCounter.swift in Sources */,
 				15B10EC725EBF6A7008B942C /* NoteNameProducer.swift in Sources */,
+				1573DECC25FFE2230071CFE0 /* PlayingScoringNoteReceiver.swift in Sources */,
 				1543EF9925E308C400336565 /* Instrument.swift in Sources */,
 				15A39D9625E256C0007D32BD /* Game.swift in Sources */,
 				15A39DA325E2E49B007D32BD /* Note.swift in Sources */,
 				15984ADE25E19B7E007DB4CC /* MidiPlayer.swift in Sources */,
 				1543EF8E25E3032800336565 /* CollectionExtension.swift in Sources */,
 				15063A4F25EE9375006E7EB0 /* NoteNameViewModel.swift in Sources */,
+				1573DEC325FFE1200071CFE0 /* NoteReceiver.swift in Sources */,
 				1510664F25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */,
 				15C2895A25E17EF500032A26 /* ContentView.swift in Sources */,
 				157B140425F3D518006F89E7 /* PianoView.swift in Sources */,

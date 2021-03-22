@@ -13,6 +13,16 @@ protocol Instrument {
     func stopNote(_ note: Note)
 }
 
+extension Instrument {
+    func playShortNote(_ note: Note) {
+        DispatchQueue.global(qos: .background).async {
+            startNote(note)
+            sleep(1)
+            stopNote(note)
+        }
+    }
+}
+
 class PianoInstrument: Instrument {
     private let engine = AVAudioEngine()
     private(set) var sampler = AVAudioUnitSampler()

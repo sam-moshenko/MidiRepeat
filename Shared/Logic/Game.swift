@@ -12,6 +12,7 @@ import Foundation
 class Game: ObservableObject {
     @Published var score: String = ""
     @Published var notes: [NoteNameViewModel] = .init()
+    @Published var playedNotes: Set<Note> = .init()
     
     private let midiPlayer: MidiPlayerProtocol
     private let randomMidiGenerator: MidiGeneratorProtocol
@@ -24,7 +25,8 @@ class Game: ObservableObject {
     private var cancellables: Set<AnyCancellable> = .init()
     
     init() {
-        midiPlayer = MidiPlayer(instrument: PianoInstrument())
+        let instrument = PianoInstrument()
+        midiPlayer = MidiPlayer(instrument: instrument)
         randomMidiGenerator = RandomMidiGenerator()
         midiReceiver = MidiReceiver()
         noteCorrectnessReceiver = AnyNoteCorrectnessReceiver(scoreCounter, noteNameProvider)
@@ -39,6 +41,17 @@ class Game: ObservableObject {
             case .none: break
             }
         }
+        
+        let noteReceiver = AnyNoteReceiver(
+            PlayingScoringNoteReceiver(
+                checker: midiChecker,
+                instrument: instrument
+            )
+        )
+        $playedNotes.sink { value in
+            noteReceiver.notes.send(value)
+        }.store(in: &cancellables)
+//        $playedNotes.subscribe(noteReceiver.notes).store(in: &cancellables)
     }
     
     func onPlayTap() {

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PianoView: View {
-    var notes: [Note] = (0...48)
+    @Binding var playedNotes: Set<Note>
+    var notes: [Note] = (48...71)
         .map { Note(value: $0) }
     var whiteNotes: [Note] {
         notes.filter { $0.isWhite }
@@ -21,16 +22,23 @@ struct PianoView: View {
                 let whiteWidth = geometry.size.width / CGFloat(whiteNotes.count) - whiteSpacing
                 let blackWidth = whiteWidth / 2
                 HStack(spacing: whiteSpacing) {
-                    ForEach(whiteNotes, id: \.self) { note -> AnyView in
-                        return AnyView(
+                    ForEach(whiteNotes, id: \.self) { note in
                             Rectangle()
                                 .foregroundColor(Color(white: 0.85))
                                 .frame(width: whiteWidth - whiteSpacing)
                                 .contentShape(Rectangle())
-                                .onTapGesture {
-                                    print(note.key)
-                                }
-                        )
+                                .gesture(
+                                    DragGesture(
+                                        minimumDistance: 0,
+                                        coordinateSpace: .local
+                                    ).onChanged {
+                                        print($0)
+                                        playedNotes.insert(note)
+                                    }.onEnded {
+                                        print($0)
+                                        playedNotes.remove(note)
+                                    }
+                                )
                     }
                 }
                 .frame(height: geometry.size.height)
@@ -51,9 +59,16 @@ struct PianoView: View {
                                         .foregroundColor(Color(white: 0.1))
                                         .frame(width: blackWidth)
                                         .contentShape(Rectangle())
-                                        .onTapGesture {
-                                            print(note.key)
-                                        }
+                                        .gesture(
+                                            DragGesture(
+                                                minimumDistance: 0,
+                                                coordinateSpace: .local
+                                            ).onChanged { _ in
+                                                playedNotes.insert(note)
+                                            }.onEnded { _ in
+                                                playedNotes.remove(note)
+                                            }
+                                        )
                                 }
                             )
                         }
@@ -69,7 +84,7 @@ struct PianoView: View {
 struct PianoView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            PianoView()
+            PianoView(playedNotes: .constant([]))
         }
     }
 }
