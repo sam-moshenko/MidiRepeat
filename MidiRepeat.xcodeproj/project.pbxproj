@@ -15,6 +15,7 @@
 		1510664325E19EFB00DE8C74 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = 1510664125E19EFB00DE8C74 /* piano.sf2 */; };
 		1510664E25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */; };
 		1510664F25E1A99D00DE8C74 /* MidiReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */; };
+		1529EC8F2609EEC600458799 /* MidiCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529EC8E2609EEC600458799 /* MidiCheckerTests.swift */; };
 		1543EF8D25E3032800336565 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF8C25E3032800336565 /* CollectionExtension.swift */; };
 		1543EF8E25E3032800336565 /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF8C25E3032800336565 /* CollectionExtension.swift */; };
 		1543EF9825E308C400336565 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1543EF9725E308C400336565 /* Instrument.swift */; };
@@ -68,6 +69,7 @@
 		15063A4D25EE9375006E7EB0 /* NoteNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNameViewModel.swift; sourceTree = "<group>"; };
 		1510664125E19EFB00DE8C74 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
 		1510664D25E1A99D00DE8C74 /* MidiReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiReceiver.swift; sourceTree = "<group>"; };
+		1529EC8E2609EEC600458799 /* MidiCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidiCheckerTests.swift; sourceTree = "<group>"; };
 		1543EF8C25E3032800336565 /* CollectionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtension.swift; sourceTree = "<group>"; };
 		1543EF9725E308C400336565 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		1547D49B25EBFD6000E25445 /* NoteNameProducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNameProducerTests.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				15B10EAE25EBDA4D008B942C /* ScoreCounterTests.swift */,
 				1547D49B25EBFD6000E25445 /* NoteNameProducerTests.swift */,
+				1529EC8E2609EEC600458799 /* MidiCheckerTests.swift */,
 				15B10EB025EBDA4D008B942C /* Info.plist */,
 			);
 			path = MidiRepeatTests;
@@ -409,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1547D49C25EBFD6000E25445 /* NoteNameProducerTests.swift in Sources */,
+				1529EC8F2609EEC600458799 /* MidiCheckerTests.swift in Sources */,
 				15B10EAF25EBDA4D008B942C /* ScoreCounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

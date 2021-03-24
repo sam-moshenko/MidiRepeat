@@ -24,6 +24,7 @@ class MidiChecker: MidiCheckerProtocol {
     func check(referenceNotes: [Note]) {
         notesPlayed = 0
         self.referenceNotes = referenceNotes
+        correctnessReceiver.reset.send(())
     }
     
     func onTapNote(_ note: Note) {
