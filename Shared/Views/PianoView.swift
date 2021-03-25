@@ -37,18 +37,15 @@ struct PianoView: View {
                 HStack(spacing: whiteSpacing) {
                     ForEach(whiteNotes, id: \.self) { note in
                             Rectangle()
-                                .foregroundColor(Color(white: 0.85))
+                                .foregroundColor(playedNotes.contains(note) ? Color(white: 0.7) : Color(white: 0.85))
                                 .frame(width: whiteWidth - whiteSpacing)
                                 .contentShape(Rectangle())
                                 .gesture(
                                     DragGesture(
-                                        minimumDistance: 0,
-                                        coordinateSpace: .local
-                                    ).onChanged {
-                                        print($0)
+                                        minimumDistance: 0
+                                    ).onChanged { _ in
                                         playedNotes.insert(note)
-                                    }.onEnded {
-                                        print($0)
+                                    }.onEnded { _ in
                                         playedNotes.remove(note)
                                     }
                                 )
@@ -61,13 +58,12 @@ struct PianoView: View {
                         HStack(spacing: 0) {
                             Spacer(minLength: spacing * whiteWidth)
                             Rectangle()
-                                .foregroundColor(Color(white: 0.1))
+                                .foregroundColor(playedNotes.contains(note) ? Color(white: 0.2) : Color(white: 0.1))
                                 .frame(width: blackWidth)
                                 .contentShape(Rectangle())
                                 .gesture(
                                     DragGesture(
-                                        minimumDistance: 0,
-                                        coordinateSpace: .local
+                                        minimumDistance: 0
                                     ).onChanged { _ in
                                         playedNotes.insert(note)
                                     }.onEnded { _ in
